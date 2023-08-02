@@ -97,22 +97,13 @@ end)
 RegisterNUICallback('chatResult', function(data, cb)
   chatInputActive = false
   SetNuiFocus(false, false)
-
   if not data.canceled then
-    local id = PlayerId()
-
-    --deprecated
-    local r, g, b = 0, 0x99, 255
-
     if data.message:sub(1, 1) == '/' then
-      ExecuteCommand(data.message:sub(2))
-      TriggerServerEvent('ax-chat:ExecuteCommand','/'..data.message:sub(2))
+      ExecuteCommand(data.message:sub(2))    
     else
-      TriggerServerEvent('_chat:messageEntered', GetPlayerName(id), { r, g, b }, data.message)
-      TriggerServerEvent('ax-chat:ExecuteCommand',data.message)
+      ExecuteCommand(data.message:sub(1))      
     end
   end
-
   cb('ok')
 end)
 
