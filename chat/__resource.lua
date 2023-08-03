@@ -1,4 +1,6 @@
-description 'chat management stuff'
+author 'MOWGLIUwU#0215'
+description 'MFW-CHAT BY MOWGLIUwU#0215'
+version '1.0.0'
 
 ui_page 'html/index.html'
 

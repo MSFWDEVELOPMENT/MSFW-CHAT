@@ -49,9 +49,10 @@
           <div class="buttons">
             <button onclick="$('textarea').val('/'+$(this).attr('id')+' ')" id="ooc">OOC</button>
             <button onclick="$('textarea').val('/'+$(this).attr('id')+' ')" id="me">ME</button>
-            <button onclick="$('textarea').val('/'+$(this).attr('id')+' ')" id="me">911</button>
-            <button onclick="$('textarea').val('/'+$(this).attr('id')+' ')" id="me">311</button>
+            <button onclick="$('textarea').val('/'+$(this).attr('id')+' ')" id="911">911</button>
+            <button onclick="$('textarea').val('/'+$(this).attr('id')+' ')" id="311">311</button>
             <button onclick="$('textarea').val('/'+$(this).attr('id')+' ')" id="report">Report</button>
+            <!-- <button onclick="$('textarea').val('/'+$(this).attr('id')+' ')" id="menu">hud</button> -->
           </div>
         </div>
         <suggestions :message="message" :suggestions="suggestions">
